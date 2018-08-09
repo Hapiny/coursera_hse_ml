@@ -1,0 +1,2547 @@
+
+<!-- saved from url=(0107)https://s3.amazonaws.com/coursera-uploads/peer-review/4bbc0d1d316d9fd25aba087da8d3910e/Intro-ML-final.ipynb -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><style type="text/css">/*.lleo_errorSelection *::-moz-selection,
+.lleo_errorSelection *::selection,
+.lleo_errorSelection *::-webkit-selection {
+    background-color: red !important;
+    color: #fff !important;;
+}*/
+
+#lleo_dialog,
+#lleo_dialog * {
+    color: #000 !important;
+    font: normal 13px Arial, Helvetica !important;
+    line-height: 15px !important;
+    margin: 0 !important;
+	padding: 0 !important;
+	background: none !important;
+	border: none 0 !important;
+	position: static !important;
+	vertical-align: baseline !important;
+	overflow: visible !important;
+	width: auto !important;
+	height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+	float: none !important;
+	visibility: visible !important;
+	text-align: left !important;
+    text-transform: none !important;
+	border-collapse: separate !important;
+	border-spacing: 2px !important;
+    box-sizing: content-box !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+    letter-spacing: normal !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    filter: none !important;
+}
+#lleo_dialog *:before,
+#lleo_dialog *:after {
+    content: '';
+}
+
+#lleo_dialog iframe {
+	height: 0 !important;
+	width: 0 !important;
+}
+
+#lleo_dialog {
+    position: absolute !important;
+    background: #fff !important;
+    border: solid 1px #ccc !important;
+    padding: 7px 0 0 !important;
+    left: -999px;
+    top: -999px;
+    width: 440px !important;
+    overflow: hidden;
+    display: block !important;
+    z-index: 999999999 !important;
+    box-shadow: 8px 16px 30px rgba(0, 0, 0, 0.16) !important;
+    border-radius: 3px !important;
+    opacity: 0 !important;
+    -webkit-transform: translateY(15px);
+    -moz-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    -o-transform: translateY(15px);
+    transform: translateY(15px);
+}
+#lleo_dialog.lleo_show_small {
+    width: 150px !important;
+}
+#lleo_dialog.lleo_show {
+    opacity: 1 !important;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s !important;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s !important;
+    -ms-transition: -ms-transform 0.3s, opacity 0.3s !important;
+    -o-transition: -o-transform 0.3s, opacity 0.3s !important;
+    transition: transform 0.3s, opacity 0.3s !important;
+}
+#lleo_dialog.lleo_collapse {
+    opacity: 0 !important;
+    -webkit-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -moz-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -ms-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -o-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s !important;
+    -moz-transition: -moz-transform 0.4s, opacity 0.4s !important;
+    -ms-transition: -ms-transform 0.4s, opacity 0.4s !important;
+    -o-transition: -o-transform 0.4s, opacity 0.4s !important;
+    transition: transform 0.4s, opacity 0.4s !important;
+}
+#lleo_dialog input::-webkit-input-placeholder {
+    color: #aaa !important;
+}
+#lleo_dialog .lleo_has_pic #lleo_word {
+	margin-right: 80px !important;
+}
+#lleo_dialog #lleo_translationsContainer1 {
+	position: relative !important;
+}
+#lleo_dialog #lleo_translationsContainer2 {
+	padding: 7px 0 0 !important;
+	vertical-align: middle !important;
+}
+#lleo_dialog #lleo_word {
+    color: #000 !important;
+    margin: 0 5px 2px 0 !important;
+    /*float: left !important;*/
+}
+#lleo_dialog .lleo_has_sound #lleo_word {
+    margin-left: 30px !important;
+}
+#lleo_dialog #lleo_text {
+    font-weight: bold !important;
+    color: #d56e00 !important;
+    text-decoration: none !important;
+    cursor: default !important;
+}
+/*
+#lleo_dialog #lleo_text.lleo_known {
+    cursor: pointer !important;
+    text-decoration: underline !important;
+}
+*/
+/*#lleo_dialog #lleo_closeBtn {
+    position: absolute !important;
+    right: 6px !important;
+    top: 5px !important;
+    line-height: 1px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 0 !important;
+    color: #aaa !important;
+    display: block !important;
+	z-index: 9999999999 !important;
+	width: 7px !important;
+	height: 7px !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}*/
+
+#lleo_dialog #lleo_optionsBtn {
+    position: absolute !important; 
+    right: 3px !important;
+    top: 5px !important;
+    line-height: 1px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 13px !important;
+    color: #aaa !important;
+    padding: 2px !important;
+	display: none;
+}
+    #lleo_dialog.lleo_optionsShown #lleo_optionsBtn {
+        display: block !important;
+    }
+    #lleo_dialog #lleo_optionsBtn img {
+        width: 12px !important;
+        height: 12px !important;
+    }
+#lleo_dialog #lleo_sound {
+    float: left !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin-left: 9px !important;
+    margin-right: 3px !important;
+    background: 0 0 no-repeat !important;
+    cursor: pointer !important;
+    display: none !important;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAfNJREFUeNq0U01IVFEU/u57Oo5WhBRIBBptykWLYBa2soWiEKQQEbrSFsGbVRQKQc2iFqGitXqvjQxCoCJCqyI0aBUtZILaJNUuYWYWo8HovJ/707nP94bnz0rxwvfOuefd8517fi5TSuE4i50YwZ3l37ZhNlpgzFkaaM/G9sHF1YskNrT+7l4PjMOcb78t2JL71uxgB+2UlfxHTtq5N94fIOh/88kWgWfl73ZCSQkpeGg3H091JY6dI2S00qA/N3KO3dDUYhFgEmZGurG+w9FqApIHsVM7kaTF9Nhn0r8Q7hPWQgIRuNaH3AMUA4W/Lkdh04cpFS43G0TgxQTvCdMETVAk3KynIHwXZU/ge8XDt7KH9bKLjU0P2zVO5LsEpSejVRJ9UR18EtfqKegovs9R3Q6w9c/H1o4Aa2Jwm1lIvn9RJ4w9RdRRzqcYrpwycCll4Cy1lnkS3Bc6vfBg28v8aRIfI78zhB/1GygROH3jLyyzMQ0zlUZuZBSlKkeLoegGtTjYLcJ8pF+NakHOFC2J6w+f25mxSfWrWFF/ShXVPTGvtN14NNkVnxlYWJkgZEL7/vwKr55lKSVnaGYWkuYgrgG172uUv47+U7fw0EHaJXmalUQy/HqO6lBzEsVjJC4Q8kd6TETQpjuaGOvjv8b/AgwA/ij1XMx58NIAAAAASUVORK5CYII=) !important;
+}
+#lleo_dialog .lleo_has_sound #lleo_sound {
+    display: block !important;
+}
+
+#lleo_dialog #lleo_soundWave {
+    border: solid 5px #4495CC !important;
+    border-radius: 5px !important;
+    position: absolute !important;
+    left: -5px !important;
+    top: -5px !important;
+    right: -5px !important;
+    bottom: -5px !important;
+    z-index: 0 !important;
+    opacity: 0.9 !important;
+    display: none !important;
+}
+    #lleo_dialog #lleo_soundWave.lleo_beforePlaying {
+        display: block !important;
+    }
+    #lleo_dialog #lleo_soundWave.lleo_playing {
+        opacity: 0 !important;
+        border-width: 20px !important;
+        border-radius: 30px !important;
+
+        -webkit-transform: scale(1.07,1.1) !important;
+        -moz-transform: scale(1.07,1.1) !important;
+        -ms-transform: scale(1.07,1.1) !important;
+        transform: scale(1.07,1.1) !important;
+
+        -webkit-transition: all 0.6s !important;
+        -moz-transition: all 0.6s !important;
+        -ms-transition: all 0.6s !important;
+        transition: all 0.6s !important;
+    }
+
+
+#lleo_dialog #lleo_picOuter {
+    position: absolute !important;
+    float: right !important;
+    top: 4px;
+    right: 5px;
+    z-index: 9 !important;
+    display: none !important;
+    width: 100px !important;
+}
+    #lleo_dialog.lleo_optionsShown #lleo_picOuter {
+        right: 25px;
+    }
+#lleo_dialog .lleo_has_pic #lleo_picOuter {
+    display: block !important;
+}
+    #lleo_dialog #lleo_picOuter:hover {
+        width: auto !important;
+        z-index: 11 !important;
+    }
+#lleo_dialog #lleo_pic,
+#lleo_dialog #lleo_picBig {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    border: solid 2px #fff !important;
+    -webkit-border-radius: 2px !important;
+    -moz-border-radius: 2px !important;
+	border-radius: 2px !important;
+    z-index: 1 !important;
+}
+#lleo_dialog #lleo_pic {
+	position: relative !important;
+    border: none !important;
+	width: 30px !important;
+}
+#lleo_dialog #lleo_picBig {
+    box-shadow: -1px 2px 4px rgba(0,0,0,0.3);
+    z-index: 2 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+    #lleo_dialog #lleo_picOuter:hover #lleo_picBig {
+        visibility: visible !important;
+        opacity: 1 !important;
+        -webkit-transition: opacity 0.3s !important;
+        -webkit-transition-delay: 0.3s !important;
+    }
+#lleo_dialog #lleo_transcription {
+    margin: 0 80px 4px 31px !important;
+    color: #aaaaaa !important;
+}
+#lleo_dialog .lleo_no_trans {
+    color: #aaa !important;
+}
+
+#lleo_dialog .ll-translation-counter {
+	float: right !important;
+    font-size: 11px !important;
+    color: #aaa !important;
+    padding: 2px 2px 1px 10px !important;
+}
+
+#lleo_dialog .ll-translation-text {
+	float: left !important;
+	/*width: 80% !important;*/
+}
+
+#lleo_dialog #lleo_trans a {
+    color: #3F669F !important;
+    text-decoration: none !important;
+    text-overflow: ellipsis !important;
+    padding: 1px 4px !important;
+    overflow: hidden !important;
+    float: left !important;
+    width: 320px !important;
+}
+
+#lleo_dialog .ll-translation-item {
+    color: #3F669F !important;
+    border: solid 1px #fff !important;
+    padding: 3px !important;
+    width: 100% !important;
+    float: left !important;
+	-moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+}
+
+#lleo_dialog .ll-translation-item:hover {
+	border: solid 1px #9FC2C9 !important;
+    background: #EDF4F6 !important;
+	cursor: pointer !important;
+}
+#lleo_dialog .ll-translation-item:hover .ll-translation-counter {
+	color: #83a0a6 !important;
+}
+
+#lleo_dialog .ll-translation-marker {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAWSURBVBhXY7RPm/+fAQkwIXNAbMICAJQ8AkvqWg/SAAAAAElFTkSuQmCC) !important;
+    display: inline-block !important;
+    width: 4px !important;
+    height: 4px !important;
+    margin: 7px 5px 2px 2px !important;
+    float: left !important;
+}
+
+#lleo_dialog #lleo_icons {
+    color: #aaa !important;
+    font-size: 11px !important;
+    background: #f8f8f8 !important;
+    padding: 10px 10px 10px 16px !important;
+}
+#lleo_icons a {
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin: 0 10px -4px 3px !important;
+    text-decoration: none !important;
+    opacity: 0.5 !important;
+    background: url(data:image/png;base64,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) !important;
+}
+#lleo_icons a:hover {
+    opacity: 1 !important;
+}
+#lleo_icons a.lleo_google     {background-position:-34px 0 !important;}
+#lleo_icons a.lleo_multitran  {background-position:-64px 0 !important;}
+#lleo_icons a.lleo_lingvo     {background-position:-51px 0 !important; width: 12px !important;}
+#lleo_icons a.lleo_dict       {background-position:-17px 0 !important;}
+#lleo_icons a.lleo_linguee    {background-position:-81px 0 !important;}
+#lleo_icons a.lleo_michaelis  {background-position:-98px 0 !important;}
+
+#lleo_dialog #lleo_contextContainer {
+    margin: 0 !important;
+    padding: 3px 15px 8px 10px !important;
+    background: #eee !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)) !important;
+    background: -moz-linear-gradient(-90deg, #fff, #eee) !important;
+    border-bottom: solid 1px #ddd !important;
+    border-top-left-radius: 3px !important;
+    border-top-right-radius: 3px !important;
+    display: none !important;
+    overflow: hidden !important;
+}
+#lleo_dialog .lleo_has_context #lleo_contextContainer {
+    display: block !important;
+}
+#lleo_dialog #lleo_context {
+    color: #444 !important;
+    text-shadow: 1px 1px 0 #f4f4f4 !important;
+    line-height: 12px !important;
+    font-size: 11px !important;
+    margin-left: 2px !important;
+}
+#lleo_dialog #lleo_context b {
+    line-height: 12px !important;
+    color: #000 !important;
+    font-weight: bold !important;
+    font-size: 11px !important;
+}
+/*#lleo_dialog #lleo_gBrand {
+    color: #aaa !important;
+    font-size: 10px !important;
+    *//*padding-right: 52px !important;*//*
+    padding-bottom: 14px !important;
+    margin: -3px 4px 0 4px !important;
+    background: left bottom url(data:image/png;base64,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) no-repeat !important;
+    display: inline-block !important;
+    float: right !important;
+}
+#lleo_dialog #lleo_gBrand.hidden {
+    display: none !important;
+}*/
+#lleo_dialog #lleo_translateContextLink {
+    color: #444 !important;
+    text-shadow: 1px 1px 0 #f4f4f4 !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#ddd)) !important;
+    background: -moz-linear-gradient(-90deg, #f4f4f4, #ddd) !important;
+    border: solid 1px !important;
+    box-shadow: 1px 1px 0 #f6f6f6 !important;
+    border-color: #999 #aaa #aaa #999 !important;
+    -moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+    padding: 0 3px !important;
+    font-size: 11px !important;
+    text-decoration: none !important;
+    margin: 1px 5px 0 !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+}
+#lleo_dialog #lleo_translateContextLink:hover {
+    background: #f8f8f8 !important;
+}
+#lleo_dialog #lleo_translateContextLink.hidden {
+    visibility: hidden !important;
+}
+
+#lleo_dialog #lleo_setTransForm {
+    display: block !important;
+    margin-top: 3px !important;
+    padding-top: 5px !important;
+    /* Set position and background because the form might be overlapped by an image when no translations */
+    position: relative !important;
+    background: #fff !important;
+    z-index: 10 !important;
+    padding-bottom: 10px !important;
+    padding-left: 16px !important;
+}
+#lleo_dialog .lleo-custom-translation {
+    padding: 4px 5px !important;
+    border: solid 1px #ddd !important;
+	border-radius: 2px !important;
+    width: 90% !important;
+    min-width: 270px !important;
+    background: -webkit-gradient(linear, 0 0, 0 20, from(#f1f1f1), to(#fff)) !important;
+    background: -moz-linear-gradient(-90deg, #f1f1f1, #fff) !important;
+	font: normal 13px Arial, Helvetica !important;
+	line-height: 15px !important;
+}
+#lleo_dialog .lleo-custom-translation:hover {
+    border: solid 1px #aaa !important;
+}
+#lleo_dialog .lleo-custom-translation:focus {
+    background: #FFFEC9 !important;
+}
+
+#lleo_dialog *.hidden {
+    display: none !important;
+}
+
+#lleo_dialog .infinitive{
+    color: #D56E00 !important;
+    text-decoration: none;
+    border-bottom: 1px dotted #D56E00 !important;
+}
+#lleo_dialog .infinitive:hover{
+    border: none !important;
+}
+
+#lleo_dialog .lleo_separator {
+    height: 1px !important;
+    background: #eee;
+    margin-top: 10px !important;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, #eee 8%, rgba(255,255,255,1) 80%) !important;
+    background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+}
+#lleo_dialog #lleo_trans {
+    /*border-top: 1px solid #eeeeee !important;*/
+    padding: 5px 30px 0 14px !important;
+    zoom: 1;
+}
+
+#lleo_dialog .lleo_clearfix {
+	display: block !important;
+	clear: both !important;
+	visibility: hidden !important;
+	height: 0 !important;
+	font-size: 0 !important;
+}
+
+
+#lleo_dialog #lleo_picOuter table {
+    width: 44px !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    vertical-align: middle !important;
+}
+
+#lleo_dialog #lleo_picOuter td {
+    width: 38px !important;
+    height: 38px !important;
+    /*border: 1px solid #eeeeee !important;*/
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+
+#lleo_dialog #lleo_picOuter td div {
+	height: 38px !important;
+	overflow: hidden !important;
+}
+
+#lleo_dialog .lleo_empty {
+    margin: 0 5px 7px !important;
+}
+
+#lleo_youtubeExportBtn {
+    margin-left: 10px;
+    height: 24px;
+}
+    #lleo_youtubeExportBtn i {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: 0 0 url(https://d144fqpiyasmrr.cloudfront.net/plugins/all/images/i16.png) !important;
+    }
+    #lleo_youtubeExportBtn .yt-uix-button-content {
+        font-size: 12px;
+        line-height: 2px;
+    }
+
+
+/*** Parsed Lyrics Content *****************************/
+
+.lleo_lyrics tran {
+    background: transparent !important;
+    border-radius: 2px !important;
+    text-shadow: none !important;
+    cursor: pointer !important;
+}
+    .lleo_lyrics tran:hover {
+        color: #fff !important;
+        background: #C77213 !important;
+        -webkit-transition: all 0.1s !important;
+        -moz-transition: all 0.1s !important;
+        -ms-transition: all 0.1s !important;
+        -o-transition: all 0.1s !important;
+        transition: all 0.1s !important;
+    }
+
+.lleo_songName {
+    border: solid 1px #ffd47c;
+    background: #fff1c2;
+    border-radius: 2px;
+}
+
+.lleo_hidden_iframe {
+    visibility: hidden;
+}</style></head><body style="">{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 110,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np\n",
+    "import pandas as pd\n",
+    "from sklearn.ensemble import GradientBoostingClassifier\n",
+    "from sklearn.cross_validation import KFold, cross_val_score\n",
+    "from sklearn.metrics import roc_auc_score\n",
+    "import time\n",
+    "import datetime"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 1. &#1056;&#1038;&#1057;�&#1056;&#1105;&#1057;�&#1057;�&#1056;&#1030;&#1056;�&#1056;�&#1056;&#1112; csv &#1057;&#1027; &#1056;&#1169;&#1056;�&#1056;&#1029;&#1056;&#1029;&#1057;�&#1056;&#1112;&#1056;&#1105;, &#1056;&#1109;&#1057;�&#1057;&#1027;&#1056;�&#1056;&#1105;&#1056;&#1030;&#1056;�&#1056;�&#1056;&#1112; &#1057;�&#1056;&#1105;&#1057;�&#1056;&#1105; \"&#1056;&#1105;&#1056;� &#1056;�&#1057;&#1107;&#1056;&#1169;&#1057;&#1107;&#1057;�&#1056;�&#1056;&#1110;&#1056;&#1109;\""
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style>\n",
+       "    .dataframe thead tr:only-child th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: left;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "</style>\n",
+       "\n",
+       "  \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "  \n",
+       "  \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "  \n",
+       "<table border="\&quot;1\&quot;" class="\&quot;dataframe\&quot;"><thead><tr style="\&quot;text-align:" right;\"=""><th></th><th>start_time</th><th>lobby_type</th><th>r1_hero</th><th>r1_level</th><th>r1_xp</th><th>r1_gold</th><th>r1_lh</th><th>r1_kills</th><th>r1_deaths</th><th>r1_items</th><th>...</th><th>dire_boots_count</th><th>dire_ward_observer_count</th><th>dire_ward_sentry_count</th><th>dire_first_ward_time</th><th>duration</th><th>radiant_win</th><th>tower_status_radiant</th><th>tower_status_dire</th><th>barracks_status_radiant</th><th>barracks_status_dire</th></tr><tr><th>match_id</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><th>0</th><td>1430198770</td><td>7</td><td>11</td><td>5</td><td>2098</td><td>1489</td><td>20</td><td>0</td><td>0</td><td>7</td><td>...</td><td>4</td><td>2</td><td>2</td><td>-52.0</td><td>2874</td><td>1</td><td>1796</td><td>0</td><td>51</td><td>0</td></tr><tr><th>1</th><td>1430220345</td><td>0</td><td>42</td><td>4</td><td>1188</td><td>1033</td><td>9</td><td>0</td><td>1</td><td>12</td><td>...</td><td>4</td><td>3</td><td>1</td><td>-5.0</td><td>2463</td><td>1</td><td>1974</td><td>0</td><td>63</td><td>1</td></tr><tr><th>2</th><td>1430227081</td><td>7</td><td>33</td><td>4</td><td>1319</td><td>1270</td><td>22</td><td>0</td><td>0</td><td>12</td><td>...</td><td>4</td><td>3</td><td>1</td><td>13.0</td><td>2130</td><td>0</td><td>0</td><td>1830</td><td>0</td><td>63</td></tr><tr><th>3</th><td>1430263531</td><td>1</td><td>29</td><td>4</td><td>1779</td><td>1056</td><td>14</td><td>0</td><td>0</td><td>5</td><td>...</td><td>4</td><td>2</td><td>0</td><td>27.0</td><td>1459</td><td>0</td><td>1920</td><td>2047</td><td>50</td><td>63</td></tr><tr><th>4</th><td>1430282290</td><td>7</td><td>13</td><td>4</td><td>1431</td><td>1090</td><td>8</td><td>1</td><td>0</td><td>8</td><td>...</td><td>3</td><td>3</td><td>0</td><td>-16.0</td><td>2449</td><td>0</td><td>4</td><td>1974</td><td>3</td><td>63</td></tr></tbody></table>\n",
+       "<p>5 rows &#1043;� 108 columns</p>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "          start_time  lobby_type  r1_hero  r1_level  r1_xp  r1_gold  r1_lh  \\\n",
+       "match_id                                                                     \n",
+       "0         1430198770           7       11         5   2098     1489     20   \n",
+       "1         1430220345           0       42         4   1188     1033      9   \n",
+       "2         1430227081           7       33         4   1319     1270     22   \n",
+       "3         1430263531           1       29         4   1779     1056     14   \n",
+       "4         1430282290           7       13         4   1431     1090      8   \n",
+       "\n",
+       "          r1_kills  r1_deaths  r1_items          ...           \\\n",
+       "match_id                                         ...            \n",
+       "0                0          0         7          ...            \n",
+       "1                0          1        12          ...            \n",
+       "2                0          0        12          ...            \n",
+       "3                0          0         5          ...            \n",
+       "4                1          0         8          ...            \n",
+       "\n",
+       "          dire_boots_count  dire_ward_observer_count  dire_ward_sentry_count  \\\n",
+       "match_id                                                                       \n",
+       "0                        4                         2                       2   \n",
+       "1                        4                         3                       1   \n",
+       "2                        4                         3                       1   \n",
+       "3                        4                         2                       0   \n",
+       "4                        3                         3                       0   \n",
+       "\n",
+       "          dire_first_ward_time  duration  radiant_win  tower_status_radiant  \\\n",
+       "match_id                                                                      \n",
+       "0                        -52.0      2874            1                  1796   \n",
+       "1                         -5.0      2463            1                  1974   \n",
+       "2                         13.0      2130            0                     0   \n",
+       "3                         27.0      1459            0                  1920   \n",
+       "4                        -16.0      2449            0                     4   \n",
+       "\n",
+       "          tower_status_dire  barracks_status_radiant  barracks_status_dire  \n",
+       "match_id                                                                    \n",
+       "0                         0                       51                     0  \n",
+       "1                         0                       63                     1  \n",
+       "2                      1830                        0                    63  \n",
+       "3                      2047                       50                    63  \n",
+       "4                      1974                        3                    63  \n",
+       "\n",
+       "[5 rows x 108 columns]"
+      ]
+     },
+     "execution_count": 2,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "import pandas\n",
+    "features = pd.read_csv('./features.csv', index_col='match_id')\n",
+    "\n",
+    "features.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style>\n",
+       "    .dataframe thead tr:only-child th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: left;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "</style>\n",
+       "\n",
+       "  \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "  \n",
+       "  \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "  \n",
+       "<table border="\&quot;1\&quot;" class="\&quot;dataframe\&quot;"><thead><tr style="\&quot;text-align:" right;\"=""><th></th><th>start_time</th><th>lobby_type</th><th>r1_hero</th><th>r1_level</th><th>r1_xp</th><th>r1_gold</th><th>r1_lh</th><th>r1_kills</th><th>r1_deaths</th><th>r1_items</th><th>...</th><th>radiant_ward_sentry_count</th><th>radiant_first_ward_time</th><th>dire_bottle_time</th><th>dire_courier_time</th><th>dire_flying_courier_time</th><th>dire_tpscroll_count</th><th>dire_boots_count</th><th>dire_ward_observer_count</th><th>dire_ward_sentry_count</th><th>dire_first_ward_time</th></tr><tr><th>match_id</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><th>0</th><td>1430198770</td><td>7</td><td>11</td><td>5</td><td>2098</td><td>1489</td><td>20</td><td>0</td><td>0</td><td>7</td><td>...</td><td>0</td><td>35.0</td><td>103.0</td><td>-84.0</td><td>221.0</td><td>3</td><td>4</td><td>2</td><td>2</td><td>-52.0</td></tr><tr><th>1</th><td>1430220345</td><td>0</td><td>42</td><td>4</td><td>1188</td><td>1033</td><td>9</td><td>0</td><td>1</td><td>12</td><td>...</td><td>0</td><td>-20.0</td><td>149.0</td><td>-84.0</td><td>195.0</td><td>5</td><td>4</td><td>3</td><td>1</td><td>-5.0</td></tr><tr><th>2</th><td>1430227081</td><td>7</td><td>33</td><td>4</td><td>1319</td><td>1270</td><td>22</td><td>0</td><td>0</td><td>12</td><td>...</td><td>1</td><td>-39.0</td><td>45.0</td><td>-77.0</td><td>221.0</td><td>3</td><td>4</td><td>3</td><td>1</td><td>13.0</td></tr><tr><th>3</th><td>1430263531</td><td>1</td><td>29</td><td>4</td><td>1779</td><td>1056</td><td>14</td><td>0</td><td>0</td><td>5</td><td>...</td><td>0</td><td>-30.0</td><td>124.0</td><td>-80.0</td><td>184.0</td><td>0</td><td>4</td><td>2</td><td>0</td><td>27.0</td></tr><tr><th>4</th><td>1430282290</td><td>7</td><td>13</td><td>4</td><td>1431</td><td>1090</td><td>8</td><td>1</td><td>0</td><td>8</td><td>...</td><td>0</td><td>46.0</td><td>182.0</td><td>-80.0</td><td>225.0</td><td>6</td><td>3</td><td>3</td><td>0</td><td>-16.0</td></tr></tbody></table>\n",
+       "<p>5 rows &#1043;� 102 columns</p>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "          start_time  lobby_type  r1_hero  r1_level  r1_xp  r1_gold  r1_lh  \\\n",
+       "match_id                                                                     \n",
+       "0         1430198770           7       11         5   2098     1489     20   \n",
+       "1         1430220345           0       42         4   1188     1033      9   \n",
+       "2         1430227081           7       33         4   1319     1270     22   \n",
+       "3         1430263531           1       29         4   1779     1056     14   \n",
+       "4         1430282290           7       13         4   1431     1090      8   \n",
+       "\n",
+       "          r1_kills  r1_deaths  r1_items          ...           \\\n",
+       "match_id                                         ...            \n",
+       "0                0          0         7          ...            \n",
+       "1                0          1        12          ...            \n",
+       "2                0          0        12          ...            \n",
+       "3                0          0         5          ...            \n",
+       "4                1          0         8          ...            \n",
+       "\n",
+       "          radiant_ward_sentry_count  radiant_first_ward_time  \\\n",
+       "match_id                                                       \n",
+       "0                                 0                     35.0   \n",
+       "1                                 0                    -20.0   \n",
+       "2                                 1                    -39.0   \n",
+       "3                                 0                    -30.0   \n",
+       "4                                 0                     46.0   \n",
+       "\n",
+       "          dire_bottle_time  dire_courier_time  dire_flying_courier_time  \\\n",
+       "match_id                                                                  \n",
+       "0                    103.0              -84.0                     221.0   \n",
+       "1                    149.0              -84.0                     195.0   \n",
+       "2                     45.0              -77.0                     221.0   \n",
+       "3                    124.0              -80.0                     184.0   \n",
+       "4                    182.0              -80.0                     225.0   \n",
+       "\n",
+       "          dire_tpscroll_count  dire_boots_count  dire_ward_observer_count  \\\n",
+       "match_id                                                                    \n",
+       "0                           3                 4                         2   \n",
+       "1                           5                 4                         3   \n",
+       "2                           3                 4                         3   \n",
+       "3                           0                 4                         2   \n",
+       "4                           6                 3                         3   \n",
+       "\n",
+       "          dire_ward_sentry_count  dire_first_ward_time  \n",
+       "match_id                                                \n",
+       "0                              2                 -52.0  \n",
+       "1                              1                  -5.0  \n",
+       "2                              1                  13.0  \n",
+       "3                              0                  27.0  \n",
+       "4                              0                 -16.0  \n",
+       "\n",
+       "[5 rows x 102 columns]"
+      ]
+     },
+     "execution_count": 35,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "features_5_min = features.loc[:,:\"dire_first_ward_time\"]\n",
+    "features_5_min.head()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 2. Смотрим, для каких фичей встречаются пропуски в данных"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "start_time    97230\n",
+       "lobby_type    97230\n",
+       "r1_hero       97230\n",
+       "r1_level      97230\n",
+       "r1_xp         97230\n",
+       "dtype: int64"
+      ]
+     },
+     "execution_count": 36,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "features_5_min.count().head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['first_blood_time',\n",
+       " 'first_blood_team',\n",
+       " 'first_blood_player1',\n",
+       " 'first_blood_player2',\n",
+       " 'radiant_bottle_time',\n",
+       " 'radiant_courier_time',\n",
+       " 'radiant_flying_courier_time',\n",
+       " 'radiant_first_ward_time',\n",
+       " 'dire_bottle_time',\n",
+       " 'dire_courier_time',\n",
+       " 'dire_flying_courier_time',\n",
+       " 'dire_first_ward_time']"
+      ]
+     },
+     "execution_count": 37,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list(features_5_min.keys()[features_5_min.count() != 97230])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### �&nbsp;езультаты проверки:\n",
+    "Пропуски встречаются для 12 из 102 фичей ('first_blood_time', 'first_blood_team', 'first_blood_player1', 'first_blood_player2', 'radiant_bottle_time', 'radiant_courier_time', 'radiant_flying_courier_time', 'radiant_first_ward_time',\n",
+    " 'dire_bottle_time', 'dire_courier_time', 'dire_flying_courier_time',  'dire_first_ward_time').\n",
+    "\n",
+    "Чаще всего пропуски встречаются для фичей, связанных с событием **first blood**, такое явление вполне логично, потому что далеко не всегда (в 20% по данным) первое убийство в игре происходит за первые пять минут игры.\n",
+    "\n",
+    "Также пропуски встречаются в фичах, связанных со временем покупки четырех следующиех предметов **bottle, courier, flying courier,ward**. Все эти предметы обычно покупаются командами на начальных стадиях игры, но, встречаются игры, где приобретения указанных предметов происходи позже первых пяти минут игры."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 3. Замена пропусков"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 139,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "features_5_min = features_5_min.fillna(0)\n",
+    "X = features_5_min"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 4. Целевая переменная"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Целевая переменная - radiant_win. \n",
+    "\n",
+    "Значения: \n",
+    "\n",
+    "0 - победили Dire\n",
+    "\n",
+    "1 - победили Radiant"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 42,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "y = features['radiant_win']"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 5. Обучение и предсказания"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 103,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def gb_cross_val(trees):\n",
+    "    print(str(trees) + \" Trees\")\n",
+    "    model = GradientBoostingClassifier(n_estimators=trees, random_state=241)\n",
+    "    cv = KFold(len(y), n_folds=5, shuffle=True, random_state=241)\n",
+    "    start_time = datetime.datetime.now()\n",
+    "    score = cross_val_score(model, X, y, cv=cv, scoring='roc_auc', n_jobs=-1)\n",
+    "    print('Time elapsed:', datetime.datetime.now() - start_time)\n",
+    "    print(score)\n",
+    "    return score"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 94,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "tree_amounts = [10, 20, 30, 50, 100, 200]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 131,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "10 Trees\n",
+      "Time elapsed: 0:00:26.751530\n",
+      "[0.66943496 0.65627754 0.66390454 0.66281223 0.66950933]\n",
+      "20 Trees\n",
+      "Time elapsed: 0:00:49.387825\n",
+      "[0.68939011 0.67567277 0.68201026 0.67977584 0.68741889]\n",
+      "30 Trees\n",
+      "Time elapsed: 0:01:11.750103\n",
+      "[0.69641668 0.68365441 0.68731862 0.68728458 0.69280674]\n",
+      "50 Trees\n",
+      "Time elapsed: 0:01:57.590725\n",
+      "[0.70382382 0.69325479 0.69452531 0.69565719 0.70000667]\n",
+      "100 Trees\n",
+      "Time elapsed: 0:03:41.886691\n",
+      "[0.71211028 0.70275504 0.70340732 0.70450821 0.70884628]\n",
+      "200 Trees\n",
+      "Time elapsed: 0:07:07.931476\n",
+      "[0.71858478 0.71028692 0.7113764  0.71174364 0.71568352]\n"
+     ]
+    }
+   ],
+   "source": [
+    "scores = []\n",
+    "for trees in tree_amounts:\n",
+    "    scores.append(np.mean(gb_cross_val(trees)))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 132,
+   "metadata": {
+    "scrolled": false
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[0.6643877206345742,\n",
+       " 0.6828535735340822,\n",
+       " 0.6894962060591201,\n",
+       " 0.6974535562432427,\n",
+       " 0.7063254258354597,\n",
+       " 0.7135350528702983]"
+      ]
+     },
+     "execution_count": 132,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "scores"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 136,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "image/png": "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\nJOT/AxWtgTDZDHcfAAAAAElFTkSuQmCC\n",
+      "text/plain": [
+       "<matplotlib.figure.figure at="" 0x1aaa2c88="">"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "plt.plot(tree_amounts, scores)\n",
+    "plt.xlabel('n_estimators')\n",
+    "plt.ylabel('score')\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Отчет по градиентному бустингу"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "1. Пропуски встречаются для 12 из 102 фичей. Чаще всего пропуски встречаются для фичей, связанных с событием first blood, такое явление вполне логично, потому что далеко не всегда (в 20% по данным) первое убийство в игре происходит за первые пять минут игры. Также пропуски встречаются в фичах, связанных со временем покупки четырех следующиех предметов bottle, courier, flying courier,ward. Все эти предметы обычно покупаются командами на начальных стадиях игры, но, встречаются игры, где приобретения указанных предметов происходи позже первых пяти минут игры.\n",
+    "2. Целевая переменная - radiant_win.\n",
+    "3. Кросс-валидация для градиентного бустинга с 30 деревьями заняла примерно 40 секунд. Метрика качества оказалась равна 0.69.\n",
+    "4. Проверка на количестве деревьев &gt; 30 показала, что с увеличением количества деревьев качество растет и приближается к 0.72. Для ускорения обучения можно уменьшать глубину деревьев (через параметр max_depth) и использовать не всю выборку, а только ее часть."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 125,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "from sklearn.linear_model import LogisticRegression\n",
+    "from sklearn.preprocessing import StandardScaler"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 371,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "scaler = StandardScaler()\n",
+    "X = scaler.fit_transform(X)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 1. Проводим кросс-валидацию на данных"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 127,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "def ln_cross_val(C):\n",
+    "    print(\"C = \" + str(C))\n",
+    "    model = LogisticRegression(C=C, random_state=241)\n",
+    "    cv = KFold(len(y), n_folds=5, shuffle=True, random_state=241)\n",
+    "    start_time = datetime.datetime.now()\n",
+    "    score = cross_val_score(model, X, y, cv=cv, scoring='roc_auc', n_jobs=-1)\n",
+    "    print('Time elapsed:', datetime.datetime.now() - start_time)\n",
+    "    print(score)\n",
+    "    return score"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 128,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "C_pow = range(-6, 6)\n",
+    "C_range = [10.0 ** i for i in C_pow]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 372,
+   "metadata": {
+    "scrolled": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "C = 1e-06\n",
+      "Time elapsed: 0:00:04.135237\n",
+      "[0.69240908 0.68454305 0.68746097 0.68742612 0.68893055]\n",
+      "C = 1e-05\n",
+      "Time elapsed: 0:00:04.530259\n",
+      "[0.69959206 0.69159358 0.69419291 0.69433159 0.69589176]\n",
+      "C = 0.0001\n",
+      "Time elapsed: 0:00:05.887337\n",
+      "[0.7161759  0.7083769  0.70960313 0.71017245 0.71192219]\n",
+      "C = 0.001\n",
+      "Time elapsed: 0:00:08.701498\n",
+      "[0.72134945 0.71368677 0.71425051 0.71512064 0.71649386]\n",
+      "C = 0.01\n",
+      "Time elapsed: 0:00:10.910624\n",
+      "[0.7216634  0.71377395 0.71440813 0.71540233 0.7164595 ]\n",
+      "C = 0.1\n",
+      "Time elapsed: 0:00:11.553661\n",
+      "[0.72165841 0.7137031  0.71438941 0.71539496 0.71640454]\n",
+      "C = 1.0\n",
+      "Time elapsed: 0:00:11.637666\n",
+      "[0.72165762 0.71369565 0.71438656 0.71539329 0.7163998 ]\n",
+      "C = 10.0\n",
+      "Time elapsed: 0:00:11.565661\n",
+      "[0.72165702 0.7136947  0.71438623 0.71539423 0.71639952]\n",
+      "C = 100.0\n",
+      "Time elapsed: 0:00:10.481600\n",
+      "[0.72165734 0.71369455 0.7143859  0.71539408 0.71639946]\n",
+      "C = 1000.0\n",
+      "Time elapsed: 0:00:10.620608\n",
+      "[0.72165734 0.71369457 0.71438593 0.71539409 0.71639938]\n",
+      "C = 10000.0\n",
+      "Time elapsed: 0:00:10.479599\n",
+      "[0.72165733 0.71369457 0.71438593 0.71539407 0.71639938]\n",
+      "C = 100000.0\n",
+      "Time elapsed: 0:00:11.416653\n",
+      "[0.72165733 0.71369457 0.71438594 0.71539407 0.71639938]\n"
+     ]
+    }
+   ],
+   "source": [
+    "scores = []\n",
+    "for C in C_range:\n",
+    "    scores.append(np.mean(ln_cross_val(C)))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 373,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([0.61390517, 0.6061915 , 0.61246529, 0.61004834, 0.61503651])"
+      ]
+     },
+     "execution_count": 373,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "score"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 374,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "data": {
+      "image/png": "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\nloxktS8AAAAASUVORK5CYII=\n",
+      "text/plain": [
+       "<matplotlib.figure.figure at="" 0x31dc1630="">"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "plt.plot(C_pow, scores)\n",
+    "plt.xlabel('log(C)')\n",
+    "plt.ylabel('score')\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Лучшее качество логистической регрессии достигается при C &gt;= 0.01 и составляет 0.71.\n",
+    "Такое качество примерно равно качеству, достигаемому при градиентном бустинге на 250 деревьях.\n",
+    "Логистическая регрессия работает значительно быстрее, чем градиентный бустинг."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 2. Проводим кросс-валидацию, исключая категориальные признаки"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 214,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style>\n",
+       "    .dataframe thead tr:only-child th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: left;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "</style>\n",
+       "\n",
+       "  \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "  \n",
+       "  \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "  \n",
+       "<table border="\&quot;1\&quot;" class="\&quot;dataframe\&quot;"><thead><tr style="\&quot;text-align:" right;\"=""><th></th><th>start_time</th><th>lobby_type</th><th>r1_hero</th><th>r1_level</th><th>r1_xp</th><th>r1_gold</th><th>r1_lh</th><th>r1_kills</th><th>r1_deaths</th><th>r1_items</th><th>...</th><th>radiant_ward_sentry_count</th><th>radiant_first_ward_time</th><th>dire_bottle_time</th><th>dire_courier_time</th><th>dire_flying_courier_time</th><th>dire_tpscroll_count</th><th>dire_boots_count</th><th>dire_ward_observer_count</th><th>dire_ward_sentry_count</th><th>dire_first_ward_time</th></tr><tr><th>match_id</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><th>0</th><td>1430198770</td><td>7</td><td>11</td><td>5</td><td>2098</td><td>1489</td><td>20</td><td>0</td><td>0</td><td>7</td><td>...</td><td>0</td><td>35.0</td><td>103.0</td><td>-84.0</td><td>221.0</td><td>3</td><td>4</td><td>2</td><td>2</td><td>-52.0</td></tr><tr><th>1</th><td>1430220345</td><td>0</td><td>42</td><td>4</td><td>1188</td><td>1033</td><td>9</td><td>0</td><td>1</td><td>12</td><td>...</td><td>0</td><td>-20.0</td><td>149.0</td><td>-84.0</td><td>195.0</td><td>5</td><td>4</td><td>3</td><td>1</td><td>-5.0</td></tr><tr><th>2</th><td>1430227081</td><td>7</td><td>33</td><td>4</td><td>1319</td><td>1270</td><td>22</td><td>0</td><td>0</td><td>12</td><td>...</td><td>1</td><td>-39.0</td><td>45.0</td><td>-77.0</td><td>221.0</td><td>3</td><td>4</td><td>3</td><td>1</td><td>13.0</td></tr><tr><th>3</th><td>1430263531</td><td>1</td><td>29</td><td>4</td><td>1779</td><td>1056</td><td>14</td><td>0</td><td>0</td><td>5</td><td>...</td><td>0</td><td>-30.0</td><td>124.0</td><td>-80.0</td><td>184.0</td><td>0</td><td>4</td><td>2</td><td>0</td><td>27.0</td></tr><tr><th>4</th><td>1430282290</td><td>7</td><td>13</td><td>4</td><td>1431</td><td>1090</td><td>8</td><td>1</td><td>0</td><td>8</td><td>...</td><td>0</td><td>46.0</td><td>182.0</td><td>-80.0</td><td>225.0</td><td>6</td><td>3</td><td>3</td><td>0</td><td>-16.0</td></tr></tbody></table>\n",
+       "<p>5 rows × 102 columns</p>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "          start_time  lobby_type  r1_hero  r1_level  r1_xp  r1_gold  r1_lh  \\\n",
+       "match_id                                                                     \n",
+       "0         1430198770           7       11         5   2098     1489     20   \n",
+       "1         1430220345           0       42         4   1188     1033      9   \n",
+       "2         1430227081           7       33         4   1319     1270     22   \n",
+       "3         1430263531           1       29         4   1779     1056     14   \n",
+       "4         1430282290           7       13         4   1431     1090      8   \n",
+       "\n",
+       "          r1_kills  r1_deaths  r1_items          ...           \\\n",
+       "match_id                                         ...            \n",
+       "0                0          0         7          ...            \n",
+       "1                0          1        12          ...            \n",
+       "2                0          0        12          ...            \n",
+       "3                0          0         5          ...            \n",
+       "4                1          0         8          ...            \n",
+       "\n",
+       "          radiant_ward_sentry_count  radiant_first_ward_time  \\\n",
+       "match_id                                                       \n",
+       "0                                 0                     35.0   \n",
+       "1                                 0                    -20.0   \n",
+       "2                                 1                    -39.0   \n",
+       "3                                 0                    -30.0   \n",
+       "4                                 0                     46.0   \n",
+       "\n",
+       "          dire_bottle_time  dire_courier_time  dire_flying_courier_time  \\\n",
+       "match_id                                                                  \n",
+       "0                    103.0              -84.0                     221.0   \n",
+       "1                    149.0              -84.0                     195.0   \n",
+       "2                     45.0              -77.0                     221.0   \n",
+       "3                    124.0              -80.0                     184.0   \n",
+       "4                    182.0              -80.0                     225.0   \n",
+       "\n",
+       "          dire_tpscroll_count  dire_boots_count  dire_ward_observer_count  \\\n",
+       "match_id                                                                    \n",
+       "0                           3                 4                         2   \n",
+       "1                           5                 4                         3   \n",
+       "2                           3                 4                         3   \n",
+       "3                           0                 4                         2   \n",
+       "4                           6                 3                         3   \n",
+       "\n",
+       "          dire_ward_sentry_count  dire_first_ward_time  \n",
+       "match_id                                                \n",
+       "0                              2                 -52.0  \n",
+       "1                              1                  -5.0  \n",
+       "2                              1                  13.0  \n",
+       "3                              0                  27.0  \n",
+       "4                              0                 -16.0  \n",
+       "\n",
+       "[5 rows x 102 columns]"
+      ]
+     },
+     "execution_count": 214,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "X = features_5_min\n",
+    "X.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 172,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "X = X.drop(['lobby_type', 'r1_hero', 'r2_hero', 'r3_hero', 'r4_hero', 'r5_hero', 'd1_hero', 'd2_hero', 'd3_hero', 'd4_hero', 'd5_hero'], axis=1)\n",
+    "X_non_categorial = X"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 366,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "X = scaler.fit_transform(X)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 152,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "C = 1e-06\n",
+      "Time elapsed: 0:00:04.068233\n",
+      "[0.69241662 0.68449219 0.68746703 0.68735505 0.68881471]\n",
+      "C = 1e-05\n",
+      "Time elapsed: 0:00:04.287246\n",
+      "[0.69961316 0.69150564 0.69419646 0.69425458 0.69571482]\n",
+      "C = 0.0001\n",
+      "Time elapsed: 0:00:05.039288\n",
+      "[0.71630684 0.70828717 0.70971489 0.71020968 0.71172337]\n",
+      "C = 0.001\n",
+      "Time elapsed: 0:00:07.492429\n",
+      "[0.72152794 0.71360976 0.71445497 0.71521698 0.71636831]\n",
+      "C = 0.01\n",
+      "Time elapsed: 0:00:09.541546\n",
+      "[0.7218164  0.71370124 0.71462628 0.71551614 0.71634469]\n",
+      "C = 0.1\n",
+      "Time elapsed: 0:00:09.999572\n",
+      "[0.72181205 0.7136378  0.7146095  0.71551012 0.71629945]\n",
+      "C = 1.0\n",
+      "Time elapsed: 0:00:09.837563\n",
+      "[0.72181039 0.71363045 0.71460884 0.71551016 0.71629392]\n",
+      "C = 10.0\n",
+      "Time elapsed: 0:00:09.841563\n",
+      "[0.72181043 0.71362965 0.71460893 0.71551033 0.71629306]\n",
+      "C = 100.0\n",
+      "Time elapsed: 0:00:09.835563\n",
+      "[0.72181067 0.71362945 0.71460889 0.71551027 0.71629322]\n",
+      "C = 1000.0\n",
+      "Time elapsed: 0:00:09.985571\n",
+      "[0.72181072 0.71362952 0.71460893 0.71551026 0.71629323]\n",
+      "C = 10000.0\n",
+      "Time elapsed: 0:00:10.061576\n",
+      "[0.72181071 0.71362952 0.71460894 0.71551026 0.71629323]\n",
+      "C = 100000.0\n",
+      "Time elapsed: 0:00:10.116579\n",
+      "[0.7218107  0.71362952 0.71460894 0.71551026 0.71629323]\n"
+     ]
+    }
+   ],
+   "source": [
+    "scores = []\n",
+    "for C in C_range:\n",
+    "    scores.append(np.mean(ln_cross_val(C)))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Удаление категориальных признаков никак не повлияло на качество модели.\n",
+    "Значит, в предыдущей модели эти признаки никак не влияли на результат.\n",
+    "Модель определила, что признаки бесполезны."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 3. Исследование идентификаторов героев"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 196,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "X_heroes = ['r1_hero', 'r2_hero', 'r3_hero', 'r4_hero', 'r5_hero', 'd1_hero', 'd2_hero', 'd3_hero', 'd4_hero', 'd5_hero']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 197,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "X = features_5_min[X_heroes]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 162,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "unique_heroes = set()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 167,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "for column in X.columns:\n",
+    "    for hero in X[column].unique():\n",
+    "        unique_heroes.add(hero)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 184,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "N = max(unique_heroes)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Существует 112 уникальных идентификаторов героев"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 4. Мешок слов"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 186,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "data = features_5_min"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 187,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "X_pick = np.zeros((data.shape[0], N))\n",
+    "\n",
+    "for i, match_id in enumerate(data.index):\n",
+    "    for p in range(5):\n",
+    "        X_pick[i, data.ix[match_id, 'r%d_hero' % (p+1)]-1] = 1\n",
+    "        X_pick[i, data.ix[match_id, 'd%d_hero' % (p+1)]-1] = -1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 215,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "97230"
+      ]
+     },
+     "execution_count": 215,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "len(X_pick)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 5 Кросс-валидация с мешком слов"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 368,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(97230, 102)"
+      ]
+     },
+     "execution_count": 368,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "X = features_5_min\n",
+    "X.shape"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 299,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(97230, 112)"
+      ]
+     },
+     "execution_count": 299,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "X_hero_features = pd.DataFrame(data=X_pick)\n",
+    "X_hero_features.index.rename('match_id', inplace=True)\n",
+    "X_hero_features.shape"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 300,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(97230, 216)"
+      ]
+     },
+     "execution_count": 300,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Объединяем датафреймы\n",
+    "X = pd.concat([X.reset_index(), X_hero_features.reset_index()], axis=1)\n",
+    "X.drop(['match_id'], inplace=True, axis=1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 308,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style>\n",
+       "    .dataframe thead tr:only-child th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: left;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "</style>\n",
+       "\n",
+       "  \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "  \n",
+       "  \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "    \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "      \n",
+       "    \n",
+       "  \n",
+       "<table border="\&quot;1\&quot;" class="\&quot;dataframe\&quot;"><thead><tr style="\&quot;text-align:" right;\"=""><th></th><th>start_time</th><th>lobby_type</th><th>r1_hero</th><th>r1_level</th><th>r1_xp</th><th>r1_gold</th><th>r1_lh</th><th>r1_kills</th><th>r1_deaths</th><th>r1_items</th><th>...</th><th>102</th><th>103</th><th>104</th><th>105</th><th>106</th><th>107</th><th>108</th><th>109</th><th>110</th><th>111</th></tr></thead><tbody><tr><th>0</th><td>1430198770</td><td>7</td><td>11</td><td>5</td><td>2098</td><td>1489</td><td>20</td><td>0</td><td>0</td><td>7</td><td>...</td><td>0.0</td><td>0.0</td><td>1.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr><th>1</th><td>1430220345</td><td>0</td><td>42</td><td>4</td><td>1188</td><td>1033</td><td>9</td><td>0</td><td>1</td><td>12</td><td>...</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr><th>2</th><td>1430227081</td><td>7</td><td>33</td><td>4</td><td>1319</td><td>1270</td><td>22</td><td>0</td><td>0</td><td>12</td><td>...</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr><th>3</th><td>1430263531</td><td>1</td><td>29</td><td>4</td><td>1779</td><td>1056</td><td>14</td><td>0</td><td>0</td><td>5</td><td>...</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr><tr><th>4</th><td>1430282290</td><td>7</td><td>13</td><td>4</td><td>1431</td><td>1090</td><td>8</td><td>1</td><td>0</td><td>8</td><td>...</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td></tr></tbody></table>\n",
+       "<p>5 rows × 214 columns</p>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "   start_time  lobby_type  r1_hero  r1_level  r1_xp  r1_gold  r1_lh  r1_kills  \\\n",
+       "0  1430198770           7       11         5   2098     1489     20         0   \n",
+       "1  1430220345           0       42         4   1188     1033      9         0   \n",
+       "2  1430227081           7       33         4   1319     1270     22         0   \n",
+       "3  1430263531           1       29         4   1779     1056     14         0   \n",
+       "4  1430282290           7       13         4   1431     1090      8         1   \n",
+       "\n",
+       "   r1_deaths  r1_items ...   102  103  104  105  106  107  108  109  110  111  \n",
+       "0          0         7 ...   0.0  0.0  1.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  \n",
+       "1          1        12 ...   0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  \n",
+       "2          0        12 ...   0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  \n",
+       "3          0         5 ...   0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  \n",
+       "4          0         8 ...   0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  \n",
+       "\n",
+       "[5 rows x 214 columns]"
+      ]
+     },
+     "execution_count": 308,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "X.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 367,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "X = scaler.fit_transform(X)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 310,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "C = 1e-06\n",
+      "Time elapsed: 0:00:27.959599\n",
+      "[0.70656733 0.698446   0.70283485 0.70074412 0.70333496]\n",
+      "C = 1e-05\n",
+      "Time elapsed: 0:00:19.979143\n",
+      "[0.71902994 0.71120697 0.71507984 0.71291814 0.71598965]\n",
+      "C = 0.0001\n",
+      "Time elapsed: 0:00:29.835707\n",
+      "[0.74673258 0.74001936 0.74260214 0.74026026 0.74430669]\n",
+      "C = 0.001\n",
+      "Time elapsed: 0:00:22.996315\n",
+      "[0.75503591 0.74925153 0.75165321 0.74902422 0.75306145]\n",
+      "C = 0.01\n",
+      "Time elapsed: 0:00:32.720872\n",
+      "[0.75509143 0.74979078 0.75201826 0.74951065 0.75309794]\n",
+      "C = 0.1\n",
+      "Time elapsed: 0:00:50.059863\n",
+      "[0.75500689 0.74982166 0.75197248 0.74953636 0.75294704]\n",
+      "C = 1.0\n",
+      "Time elapsed: 0:00:59.331393\n",
+      "[0.75499645 0.74982521 0.75196506 0.74953762 0.75292372]\n",
+      "C = 10.0\n",
+      "Time elapsed: 0:00:21.246216\n",
+      "[0.75499654 0.74982551 0.75196402 0.74953846 0.75292095]\n",
+      "C = 100.0\n",
+      "Time elapsed: 0:00:24.125380\n",
+      "[0.75499658 0.74982553 0.75196381 0.74953847 0.7529206 ]\n",
+      "C = 1000.0\n",
+      "Time elapsed: 0:00:20.653181\n",
+      "[0.7549965  0.74982559 0.75196385 0.74953845 0.75292055]\n",
+      "C = 10000.0\n",
+      "Time elapsed: 0:00:20.523174\n",
+      "[0.75499651 0.74982558 0.75196386 0.74953845 0.75292052]\n",
+      "C = 100000.0\n",
+      "Time elapsed: 0:00:20.919196\n",
+      "[0.7549965  0.74982558 0.75196386 0.74953846 0.75292052]\n"
+     ]
+    }
+   ],
+   "source": [
+    "scores = []\n",
+    "for C in C_range:\n",
+    "    scores.append(np.mean(ln_cross_val(C)))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 312,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "array([0.61390517, 0.6061915 , 0.61246529, 0.61004834, 0.61503651])"
+      ]
+     },
+     "execution_count": 312,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "score"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 311,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "data": {
+      "image/png": "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\n",
+      "text/plain": [
+       "<matplotlib.figure.figure at="" 0x31dda160="">"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "plt.plot(C_pow, scores)\n",
+    "plt.xlabel('log(C)')\n",
+    "plt.ylabel('score')\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Лучшее качество получено при С=0.1 и равно примерно 0.75.\n",
+    "Таким образом, новые фичи улучшили нашу модель.\n",
+    "Объяснить улучшения качества можно тем, что теперь мы имеем интерпретируемые для предсказаний данные, тогда как раньше они воспринимались как шумовые."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 6. Построение предсказания"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 355,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "LogisticRegression(C=0.1, class_weight=None, dual=False, fit_intercept=True,\n",
+       "          intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,\n",
+       "          penalty='l2', random_state=241, solver='liblinear', tol=0.0001,\n",
+       "          verbose=0, warm_start=False)"
+      ]
+     },
+     "execution_count": 355,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "best_model = LogisticRegression(C=0.1, random_state=241)\n",
+    "best_model.fit(X, y)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 317,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "features_test = pd.read_csv('./features_test.csv', index_col='match_id')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 335,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "features_test = features_test.fillna(0)\n",
+    "data = features_test"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 345,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "X_pick = np.zeros((data.shape[0], N))\n",
+    "\n",
+    "for i, match_id in enumerate(data.index):\n",
+    "    for p in range(5):\n",
+    "        X_pick[i, data.ix[match_id, 'r%d_hero' % (p+1)]-1] = 1\n",
+    "        X_pick[i, data.ix[match_id, 'd%d_hero' % (p+1)]-1] = -1\n",
+    "X_heroes = pd.DataFrame(data=X_pick)\n",
+    "\n",
+    "X_test = pd.concat([features_test.reset_index(), X_heroes.reset_index()], axis=1)\n",
+    "X_test.drop(['match_id', 'index'], axis=1, inplace=True)\n",
+    "X_scaled = scaler.fit_transform(X_test)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 361,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "prediction = best_model.predict_proba(X_scaled)[:, 1]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 364,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0.008901752967974252\n",
+      "0.9965022067810533\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(min(prediction))\n",
+    "print(max(prediction))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Минимальное значение прогноза = 0.00890\n",
+    "\n",
+    "Максимальное значение прогноза = 0.99650"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Отчет по логистической регрессии"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "1. Лучшее качество логистической регрессии достигается при C &gt;= 0.01 и составляет 0.71. Такое качество примерно равно качеству, достигаемому при градиентном бустинге на 250 деревьях. Логистическая регрессия работает значительно быстрее, чем градиентный бустинг.\n",
+    "\n",
+    "2. Удаление категориальных признаков никак не повлияло на качество модели. Значит, в предыдущей модели эти признаки никак не влияли на результат. Модель определила, что признаки бесполезны.\n",
+    "\n",
+    "3. Существует 112 уникальных идентификаторов героев.\n",
+    "\n",
+    "4. Лучшее качество получено при С=0.1 и равно примерно 0.75. Таким образом, новые фичи улучшили нашу модель. Объяснить улучшения качества можно тем, что теперь мы имеем интерпретируемые для предсказаний данные, тогда как раньше они воспринимались как шумовые.\n",
+    "\n",
+    "5. Минимальное значение прогноза = 0.00890, максимальное значение прогноза = 0.99650"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:py36]",
+   "language": "python",
+   "name": "conda-env-py36-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.2"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 1
+}
+</matplotlib.figure.figure></matplotlib.figure.figure></matplotlib.figure.figure></body></html>
